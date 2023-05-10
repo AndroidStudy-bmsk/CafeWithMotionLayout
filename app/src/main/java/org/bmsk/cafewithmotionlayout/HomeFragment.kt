@@ -28,5 +28,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding.appbarProgressBar.progress = homeData.user.startCount
         binding.appbarProgressBar.max = homeData.user.totalCount
+        binding.recommendMenuList.menuLinearLayout.addView(
+            MenuView(context = requireContext()).apply {
+                setTitle("디카페인 카페라떼")
+                setImageUrl("https://picsum.photos/200/300")
+            }
+        )
     }
 }
