@@ -3,4 +3,5 @@
     <string name="home">Home</string>
     <string name="Order">Order</string>
     <string name="appbar_title_text">Hi %s!,\n오늘도 커피 한잔 어때요?</string>
+    <string name="appbar_start_title">%d/%d★</string>
 </resources>
