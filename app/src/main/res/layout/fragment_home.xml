@@ -12,10 +12,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <include
                 android:id="@+id/recommendMenuList"
+                layout="@layout/layout_horizontal_menu_list" />
+
+            <include
+                android:id="@+id/bannerLayout"
+                layout="@layout/layout_banner_image" />
+
+            <include
+                android:id="@+id/foodMenuList"
                 layout="@layout/layout_horizontal_menu_list" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
