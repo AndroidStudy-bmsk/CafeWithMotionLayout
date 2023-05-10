@@ -2,12 +2,11 @@ package org.bmsk.cafewithmotionlayout
 
 import android.content.Context
 import com.google.gson.Gson
-import org.bmsk.cafewithmotionlayout.data.model.Home
 import java.io.IOException
 
-fun Context.readData(): Home? {
+fun <T> Context.readData(fileName: String, classT: Class<T>): T? {
     return try {
-        val inputStream = this.resources.assets.open("home.json")
+        val inputStream = this.resources.assets.open(fileName)
 
         val buffer = ByteArray(inputStream.available())
         inputStream.read(buffer)
@@ -16,7 +15,7 @@ fun Context.readData(): Home? {
         String(buffer)
 
         val gson = Gson()
-        gson.fromJson(String(buffer), Home::class.java)
+        gson.fromJson(String(buffer), classT)
     } catch (e: IOException) {
         null
     }
