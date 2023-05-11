@@ -2,6 +2,8 @@
 
 모션레이아웃 사용해보기
 
+![](.README_images/CafeWithMotionLayout.gif)
+
 ### [Lorem Ipsum](https://www.lipsum.com/)
 
 ### [Lorem Picsum](https://picsum.photos/)
