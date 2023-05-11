@@ -2,6 +2,7 @@ package org.bmsk.cafewithmotionlayout
 
 import android.animation.ValueAnimator
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
@@ -24,6 +25,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         initBanner(homeData)
         initFoodList(menuData)
 
+        binding.scrollView.setOnScrollChangeListener { v, _, scrollY, _, oldScrollY ->
+            if (scrollY == 0) {
+                binding.floatingActionButton.extend()
+            } else {
+                binding.floatingActionButton.shrink()
+            }
+        }
     }
 
     private fun initFoodList(menuData: Menu) {
