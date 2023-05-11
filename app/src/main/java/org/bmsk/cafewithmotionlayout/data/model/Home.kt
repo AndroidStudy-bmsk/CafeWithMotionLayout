@@ -8,7 +8,7 @@ data class Home(
 
 data class User(
     val nickname: String,
-    val startCount: Int,
+    val starCount: Int,
     val totalCount: Int,
 )
 

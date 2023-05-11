@@ -6,4 +6,7 @@
     <string name="appbar_start_title">%d/%d★</string>
     <string name="food_menu_title">함께 하면 좋은 메뉴</string>
     <string name="recommend_title">%s님을 위한 추천 메뉴</string>
+    <string name="what_news">What news</string>
+    <string name="coupon">coupon</string>
+    <string name="delivery">DELIVERY</string>
 </resources>

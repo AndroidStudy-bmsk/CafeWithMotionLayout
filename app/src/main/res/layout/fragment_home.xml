@@ -5,30 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include
-                android:id="@+id/recommendMenuList"
-                layout="@layout/layout_horizontal_menu_list" />
-
-            <include
-                android:id="@+id/bannerLayout"
-                layout="@layout/layout_banner_image" />
-
-            <include
-                android:id="@+id/foodMenuList"
-                layout="@layout/layout_horizontal_menu_list" />
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,11 +50,12 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
                     android:layout_height="8dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="50dp"
                     android:max="12"
                     android:progress="5"
+                    android:progressDrawable="@drawable/drawable_progress"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/startCountTextView"
                     app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +93,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="2dp"
-                        android:text="What news"
+                        android:text="@string/what_news"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:drawableStartCompat="@drawable/baseline_fiber_new_24" />
@@ -127,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:drawablePadding="2dp"
-                        android:text="coupon"
+                        android:text="@string/coupon"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:drawableStartCompat="@drawable/baseline_request_page_24" />
@@ -135,4 +112,41 @@
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/recommendMenuList"
+                layout="@layout/layout_horizontal_menu_list" />
+
+            <include
+                android:id="@+id/bannerLayout"
+                layout="@layout/layout_banner_image" />
+
+            <include
+                android:id="@+id/foodMenuList"
+                layout="@layout/layout_horizontal_menu_list" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/gold"
+        android:contentDescription="@null"
+        android:text="@string/delivery"
+        android:textColor="@color/black"
+        app:icon="@drawable/baseline_delivery_dining_24"
+        app:iconTint="@color/black" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
